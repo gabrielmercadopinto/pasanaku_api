@@ -12,15 +12,10 @@ class BancoController extends Controller
      */
     public function index()
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
+        $bancos = Banco::all();
+        return response()->json([
+            'datos' => $bancos
+        ], 200);
     }
 
     /**
@@ -35,14 +30,6 @@ class BancoController extends Controller
      * Display the specified resource.
      */
     public function show(Banco $banco)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Banco $banco)
     {
         //
     }
