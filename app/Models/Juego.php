@@ -7,5 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Juego extends Model
 {
-    use HasFactory;
+    protected $table = 'juegos';
+
+    protected $fillable = [
+        'nombre',
+        'monto_base',
+        'cantidad_jugador',
+        'periodo',
+        'fecha_inicio',
+    ];
 }

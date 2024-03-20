@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('monedas', function (Blueprint $table) {
             $table->id();
+            $table->string('nombre');
+            $table->string('codigo', 3)->unique();
+            $table->string('simbolo');
             $table->timestamps();
         });
     }
