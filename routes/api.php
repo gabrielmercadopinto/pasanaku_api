@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\RolController;
+use App\Http\Controllers\EstadoController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -19,3 +21,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 // Route::get('/jugador', [JugadorController::class, 'index']);
+Route::resource('roles', RolController::class)->except(['create', 'edit']);
+Route::resource('estados', RolController::class)->except(['create', 'edit']);
